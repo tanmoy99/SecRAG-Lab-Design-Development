@@ -1,0 +1,11 @@
+# Fast, offline smoke test (hash embedder, no Ollama, no model downloads).
+#   python -m secrag eval-retrieval --config configs/retrieval_smoke.yaml
+name: retrieval_smoke
+description: Offline smoke run of the retrieval evaluation with the mock hash embedder.
+seed: 13
+
+embedder:
+  provider: hash
+
+grid:
+  retrieval.method: [dense, sparse, hybrid]

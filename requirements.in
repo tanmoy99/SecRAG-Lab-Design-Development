@@ -1,0 +1,21 @@
+# Top-level dependencies. Pinned versions live in requirements.txt,
+# regenerated with:  pip-compile requirements.in -o requirements.txt
+
+# Core
+numpy
+pydantic>=2
+PyYAML
+rank-bm25
+httpx
+python-dotenv
+pandas
+matplotlib
+
+# Cross-encoder reranker, NLI verifier, alternative embedder.
+# On Windows the PyPI torch wheel is CPU-only, which is what we want:
+# the GPU is left to Ollama.
+sentence-transformers
+torch
+
+# Testing
+pytest

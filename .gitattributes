@@ -1,0 +1,7 @@
+# Keep LF line endings in the repo and the working copy on every OS, so generated
+# data files stay byte-identical to what `python -m secrag generate-data` writes.
+* text=auto eol=lf
+*.png binary
+*.pdf binary
+*.npy binary
+*.sqlite binary

@@ -1,0 +1,22 @@
+[project]
+name = "secrag"
+version = "0.1.0"
+description = "SecRAG Lab: a research testbed for RAG security (poisoning, indirect prompt injection, lightweight defences)."
+requires-python = ">=3.11"
+readme = "README.md"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["secrag*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+markers = [
+    "ollama: needs a running Ollama server (auto-skipped otherwise)",
+    "slow: downloads or runs Hugging Face models",
+]
+addopts = "-q"
